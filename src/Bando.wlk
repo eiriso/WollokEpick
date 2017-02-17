@@ -12,9 +12,17 @@ object vardeno inherits Bando{
 	method repetaDragon(_,personaje){
 		return personaje.aptitud() > 30 && personaje.vardeno()
 	}
+	method lider(){
+		return pertenecientes.max({unSer=>unSer.aptitud()})
+	}
 }
 object imperio inherits Bando{
+	var lider
 	method repetaDragon(dragon,personaje){
 		return dragon.aptitud() < personaje.aptitud()
+	}
+	method lider(unSer){
+		if(self.pertenece(unSer))
+			lider=unSer
 	}
 }

@@ -11,8 +11,8 @@ class Dragon inherits Ser{
 	method puedeSerDerrotado(unEnemigo){
 		return self.aptitud()<unEnemigo.aptitud()
 	}
-	method mereceRespeto(){
-		
+	method mereceRespeto(unPersonaje){
+		bando.respetaDragon(unPersonaje)
 	}
 
 }
