@@ -10,7 +10,10 @@ class Sombra inherits Ser{
 	method aptitud(){
 		return self.magia() *espiritus
 	}
-	method puedeSerDerrotado(unEnemigo){
-		return unEnemigo.magia() -10 >= self.magia()
+	method puedeDerrotar(unContrincante){
+		return self.magia()-10>=unContrincante.magia()
+	}
+	method dispuestoPelear(){
+		return espiritus >= 5
 	}
 }

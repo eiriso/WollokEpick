@@ -8,18 +8,15 @@ class Humano inherits Ser{
 	method aptitud(){
 		return fuerzaDeVoluntad + bando.aptitud()
 	}
-	method derrotar(objetivo){
-	
-	}
+
 	method magia(){
 		return 0
 	}
-	method derrota(unContrincante){
-		return unContrincante.puedeSerDerrotado(self)
+	method puedeDerrotar(unContrincante){
+		return self.aptitud() > unContrincante.aptitud()
 	}
 	
-	method puedeSerDerrotado(unEnemigo){
-		return self.aptitud()<unEnemigo.aptitud()
+	method dispuestoPelear(){
+		return bando.dispuestoPelear(self)
 	}
-	
 }
