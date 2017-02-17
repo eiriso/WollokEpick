@@ -3,14 +3,15 @@ class Ser {
 	var bando
 	constructor(_bando){
 		bando = _bando
+		_bando.agregar(self)
 	}
 	method bando(){
 		return bando
 	}
 	method vardeno(){
-		return bando == vardeno
+		return vardeno.pertenece(self)
 	}
 	method imperial(){
-		return bando == vardeno
+		return imperio.pertenece(self)
 	}
 }

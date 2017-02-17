@@ -1,6 +1,12 @@
 
 class Bando {
-
+	var pertenecientes = []
+	method agregar(unSer){
+		pertenecientes.add(unSer)
+	}
+	method pertenece(unSer){
+		return pertenecientes.contains(unSer)
+	}
 }
 object vardeno inherits Bando{
 	method repetaDragon(_,personaje){
